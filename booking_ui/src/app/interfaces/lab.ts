@@ -17,5 +17,6 @@ export interface Lab {
   visible?: boolean;
   is_available_now?: boolean;
   notify_owner?: boolean;
+  ultraconcurrent?: boolean;
   allowed_emails?: string[];
 }

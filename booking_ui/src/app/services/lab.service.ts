@@ -44,6 +44,7 @@ export class LabService {
     formData.append('visible', String(lab.visible!));
     formData.append('notify_owner', String(lab.notify_owner!));
     formData.append('allowed_emails', String(lab.allowed_emails));
+    formData.append('ultraconcurrent', String(lab.ultraconcurrent));
     formData.append('enabled', '1');
 
     return this.http.post<Lab>(this.url, formData);
@@ -64,6 +65,7 @@ export class LabService {
     formData.append('visible', String(newLab.visible!));
     formData.append('notify_owner', String(newLab.notify_owner!));
     formData.append('allowed_emails', String(newLab.allowed_emails!));
+    formData.append('ultraconcurrent', String(newLab.ultraconcurrent!));
     formData.append('enabled', '1');
 
     return this.http.patch<Lab>(`${this.url}${id}/${config.api['labs-update']}`, formData);

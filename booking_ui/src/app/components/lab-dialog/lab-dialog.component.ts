@@ -42,6 +42,7 @@ export class LabDialogComponent implements OnInit {
     url: ['', [Validators.required, this.trimAndValidateUrl]],
     description: ['', Validators.required],
     notify_owner: [false, Validators.required],
+    ultraconcurrent: [false, Validators.required],
     allowed_emails: this.fb.array([])
   });
 
@@ -70,7 +71,8 @@ export class LabDialogComponent implements OnInit {
         visible: lab.visible,
         url: lab.url,
         description: lab.description,
-        notify_owner: lab.notify_owner
+        notify_owner: lab.notify_owner,
+        ultraconcurrent: lab.ultraconcurrent
       });
       this.populateAllowedEmails(lab.allowed_emails);
 

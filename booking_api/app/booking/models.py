@@ -69,6 +69,7 @@ class Laboratory(models.Model):
     last_modification_date = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=True)
     visible = models.BooleanField(default=False)
+    ultraconcurrent = models.BooleanField(default=False)
     owner = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='laboratory_owner', on_delete=models.CASCADE)
     notify_owner = models.BooleanField(default=False)
     allowed_emails = models.TextField(blank=True, default='')

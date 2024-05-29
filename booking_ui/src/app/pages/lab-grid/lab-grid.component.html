@@ -31,6 +31,8 @@
         <img mat-card-image [src]="lab.image ?? defaultLabImg" alt="Remote lab" class="remote-lab-img" />
 
         <mat-card-content class="card-content">
+          <strong style="color: green;" *ngIf="lab.ultraconcurrent == true">UltraConcurrent Laboratory </strong>
+          <strong style="color: blue;" *ngIf="lab.ultraconcurrent == false">Remote Laboratory </strong>
           <p>
             <strong>Course: </strong> {{ lab.course }}
             <br />

@@ -10,7 +10,7 @@ from core import models
 
 class LaboratoryAdmin(admin.ModelAdmin):
     ordering = ['id']
-    list_display = ['id', 'name', 'university', 'instructor', 'course', 'image', 'url', 'enabled', 'visible', 'owner']
+    list_display = ['id', 'name', 'university', 'instructor', 'course', 'image', 'url', 'enabled', 'visible', 'ultraconcurrent','owner']
     search_fields = ['name', 'university', 'owner__email']
 
 class EquipmentAdmin(admin.ModelAdmin):
